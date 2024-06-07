@@ -99,3 +99,12 @@ body {
     background-color: #0056b3;
   }
   
+  .homepage-title{
+    text-align: center;
+    font-size: 4em;
+  }
+
+  .rules{
+    list-style-type: none;
+    text-align: center;
+  }
