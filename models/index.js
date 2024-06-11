@@ -1,3 +1,11 @@
 const User = require('./User');
+const Day = require('./day');
 
-module.exports = { User };
+
+User.hasMany(Day, {
+    foreignKey: 'user_id',
+  });
+
+
+
+module.exports = { User , Day };
