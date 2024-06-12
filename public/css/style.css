@@ -6,6 +6,51 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 95%;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .homepage-title{
+    text-align: center;
+    font-size: 4em;
+  }
+
+  .rules{
+    list-style-type: none;
+    text-align: center;
     min-height: 100vh;
 }
 
@@ -50,6 +95,12 @@ header nav ul li a {
   column-gap: 10px;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .login-card {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -57,6 +108,7 @@ header nav ul li a {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 45%;
+  margin-top: 3rem;
 }
 
 .page-title {
@@ -131,4 +183,8 @@ header nav ul li a {
   width: 100%;
   position: absolute;
   bottom: 0%;
+}
+
+.main-container {
+  align-items: center;
 }
