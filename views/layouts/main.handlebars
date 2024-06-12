@@ -12,7 +12,7 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        {{#if LoggedIn}}
+        {{#if logged_in}}
           <li><a href="/profile">Profile</a></li>
           <li><a href="/logout">Logout</a></li>
         {{else}}
@@ -25,5 +25,8 @@
   <script src="/js/login.js"></script>
   <script src="/js/logout.js"></script>
   <script src="/js/profile.js"></script>
+    {{#if logged_in}}
+  <script src="/public/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
