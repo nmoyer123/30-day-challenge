@@ -1,17 +1,25 @@
+:root {
+  --color1: #D7DAE5;
+  --color2: #B9CDDA;
+  --color3: #A6D8D4;
+  --color4: #8EAF9D;
+  --color5: #6B7D7D;
+}
+
 body {
   font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background-color: var(--color2);
+  color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color5);
+  color: var(--color1);
   padding: 10px 0;
 }
 
@@ -28,7 +36,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -57,8 +65,8 @@ header nav ul li a {
 }
 
 .login-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: white;
+  border: 1px solid var(--color2);
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -87,7 +95,7 @@ header nav ul li a {
 .form-input {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color2);
   border-radius: 5px;
   width: 95%;
 }
@@ -101,12 +109,12 @@ header nav ul li a {
 }
 
 .btn-primary {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--color5);
+  color: var(--color1);
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: var(--color4);
 }
 
 .center-content {
@@ -117,6 +125,7 @@ header nav ul li a {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 96px;
+  color: var(--color5);
 }
 
 .center-content ul {
@@ -126,15 +135,15 @@ header nav ul li a {
 
 .center-content ul li {
   margin: 5px 0;
-  list-style: inside;
   font-size: 32px;
+  color: var(--color5);
 }
 
 .footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color5);
+  color: var(--color1);
   width: 100%;
   position: absolute;
   bottom: 0%;
@@ -142,4 +151,5 @@ header nav ul li a {
 
 .main-container {
   align-items: center;
+  background-color: var(--color2);
 }
