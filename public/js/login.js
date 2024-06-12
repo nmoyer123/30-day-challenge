@@ -14,7 +14,7 @@ document.querySelector('.login-form').addEventListener('submit', async (event) =
     });
   
     if (response.ok) {
-      window.location.href = '/layouts/main'; // Redirect to the main page on successful login
+      window.location.href = '/profile'; // Redirect to the profile page on successful login
     } else {
       alert('Login failed. Please try again.'); // Show an alert on login failure
     }
@@ -37,7 +37,7 @@ document.querySelector('.login-form').addEventListener('submit', async (event) =
     });
   
     if (response.ok) {
-      window.location.href = '/layout/main'; // Redirect to the main page on successful signup
+      window.location.href = '/profile'; // Redirect to the profile page on successful signup
     } else {
       alert('Signup failed. Please try again.'); // Show an alert on signup failure
     }
