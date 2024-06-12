@@ -5,7 +5,7 @@ document.querySelector('.login-form').addEventListener('submit', async (event) =
     const email = document.getElementById('email-login').value;
     const password = document.getElementById('password-login').value;
   
-    const response = await fetch('/login', {
+    const response = await fetch('/api/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ document.querySelector('.login-form').addEventListener('submit', async (event) =
     const email = document.getElementById('email-signup').value;
     const password = document.getElementById('password-signup').value;
   
-    const response = await fetch('/signup', {
+    const response = await fetch('/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
