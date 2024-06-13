@@ -1,18 +1,18 @@
-  <div class="container mt-5">
-    <div class="row">
-      {{#each days}}
-        <div class="col-2 mb-3">
-          <div class="day-box" id="day-{{this.day}}" onclick="showChallenges({{this.day}})">
-            Day {{this.day}}
-          </div>
-          <div class="challenges d-none" id="challenges-{{this.day}}">
-            <ul>
-              {{#each this.challenges}}
-                <li>{{this}}</li>
-              {{/each}}
-            </ul>
-          </div>
-        </div>
-      {{/each}}
+<div class="container">
+        <!-- Generate 15 boxes dynamically using JavaScript -->
     </div>
-  </div>
+    <div id="challenge-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="day-title"></h2>
+            <ul id="challenges-list">
+                <li>Run/Walk for 30 minutes</li>
+                <li>Drink a Gallon of Water a day</li>
+                <li>Read 8 pages of a book</li>
+                <li>No Alcohol</li>
+                <li>Workout 45 minutes a day</li>
+                <li>More than 7 hours of sleep</li>
+            </ul>
+        </div>
+    </div>    <script src="/js/profile.js"></script>
+
