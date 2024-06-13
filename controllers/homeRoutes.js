@@ -18,22 +18,8 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/profile', async (req, res) => {
-  try {
-    // basic data structure for days
-    const days = [
-      { day: 1, challenges: ["Challenge 1", "Challenge 2"] },
-      { day: 2, challenges: ["Challenge 3", "Challenge 4"] },
-      // Add more days 
-    ];
-
-    res.render('profile', { days });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
+router.get('/profile', (req, res) => {
+    res.render('profile');
 });
-
-
 
 module.exports = router;
