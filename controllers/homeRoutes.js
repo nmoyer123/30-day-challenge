@@ -4,22 +4,23 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async ( req, res ) => {
     try {
-        // Find the logged in user based on the session ID
-        if(!User) { 
-            res.render('homepage');     
-        } else {
-            const userData = await User.findByPk(req.session.user_id, {
-                attributes: { exclude: ['password'] },
-                include: [{ model: Day }],
-              });
-          
-              const user = userData.get({ plain: true });
+        // Get all projects and JOIN with user data
+        const Daydata = await Day.findAll({
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            },
+          ],
+        });
+    
+        // Serialize data so the template can read it
+        const Days = Daydata.map((day) => day.get({ plain: true }));
           
               res.render('homepage', {
-                ...user,
-                logged_in: true,
+                ...Days,
+                logged_in: req.session.logged_in,
               });
-        }
     } catch (err) {
         res.status(500).json(err);
     }  
