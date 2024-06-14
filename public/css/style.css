@@ -1,62 +1,25 @@
+:root {
+  --color1: #D7DAE5;
+  --color2: #B9CDDA;
+  --color3: #A6D8D4;
+  --color4: #8EAF9D;
+  --color5: #6B7D7D;
+}
+
 body {
   font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  .form-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 95%;
-  }
-  
-  .btn {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .homepage-title{
-    text-align: center;
-    font-size: 4em;
-  }
-
-  .rules{
-    list-style-type: none;
-    text-align: center;
-    min-height: 100vh;
+  background-color: var(--color2);
+  color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color5);
+  color: var(--color1);
   padding: 10px 0;
 }
 
@@ -73,12 +36,12 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.container2 {
+.container {
   max-width: 1200px;
   margin-top: 30px;
   padding: 20px;
@@ -102,8 +65,8 @@ header nav ul li a {
 }
 
 .login-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: white;
+  border: 1px solid var(--color2);
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -132,7 +95,7 @@ header nav ul li a {
 .form-input {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color2);
   border-radius: 5px;
   width: 95%;
 }
@@ -145,13 +108,24 @@ header nav ul li a {
   cursor: pointer;
 }
 
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .btn-primary {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--color5);
+  color: var(--color1);
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: var(--color4);
 }
 
 .center-content {
@@ -162,6 +136,7 @@ header nav ul li a {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 96px;
+  color: var(--color5);
 }
 
 .center-content ul {
@@ -171,15 +146,15 @@ header nav ul li a {
 
 .center-content ul li {
   margin: 5px 0;
-  list-style: inside;
   font-size: 32px;
+  color: var(--color5);
 }
 
 .footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color5);
+  color: var(--color1);
   width: 100%;
   position: absolute;
   bottom: 0%;
@@ -187,8 +162,8 @@ header nav ul li a {
 
 .main-container {
   align-items: center;
+  background-color: var(--color2);
 }
-
 /* css for profile page */
 
 .container {
@@ -196,16 +171,22 @@ header nav ul li a {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
+  background-color: #9a9494;
+  justify-items: center;
 }
 
 .box {
-  background-color: #8d0000;
+  font-size: 20px;
+  background-color: var(--color5);
   font-weight: bolder;
-  color: #f0f0f0;
+  color: var(--color1);
   border: 2px solid #4c4949;
-  border-radius: 15px;
+  border-radius: 20px;
+  height: 30px;
+  width: 75%;
   padding: 20px;
-  margin: 10px;
+  padding-top: 30px;
+  margin: 5px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
@@ -232,6 +213,7 @@ header nav ul li a {
 
 .modal-content {
   background-color: #fff;
+  list-style-type: none;
   margin: auto;
   padding: 20px;
   border: 1px solid #000000;
@@ -261,11 +243,10 @@ header nav ul li a {
 .profileQuote{
   background-color: #333;
   color: #f0f0f0;
-  font-size: 20px;
-  width: auto;
-  padding: 3px;
-  position: absolute;
-  bottom: 0%;
-  height: 7vh;
+  font-size: 23px;
+  padding: 10px;
+  padding-top: 15px;
+  height: 80px;
   text-align: center;
+  margin: 0px;
 }

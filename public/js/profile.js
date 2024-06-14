@@ -3,6 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('challenge-modal');
   const closeModal = document.querySelector('.close');
   const dayTitle = document.getElementById('day-title');
+  const submitButton = document.getElementById('submit-tasks');
+  
+  const challenges = [
+      "Run/Walk for 30 minutes",
+      "Drink a Gallon of Water a day",
+      "Read 8 pages of a book",
+      "No Alcohol",
+      "Workout 45 minutes a day",
+      "More than 7 hours of sleep"
+  ];
   
   for (let i = 1; i <= 30; i++) {
       const box = document.createElement('div');
@@ -23,5 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (event.target === modal) {
           modal.style.display = 'none';
       }
+  });
+
+  submitButton.addEventListener('click', () => {
+      const completedTasks = [];
+      for (let i = 1; i <= challenges.length; i++) {
+          const task = document.getElementById(`task${i}`);
+          if (task.checked) {
+              completedTasks.push(challenges[i-1]);
+          }
+      }
+      console.log("Completed tasks for the day:", completedTasks);
+      modal.style.display = 'none';
+      alert("Tasks submitted!");
   });
 });
