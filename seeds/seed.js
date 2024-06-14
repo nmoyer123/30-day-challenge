@@ -1,19 +1,37 @@
 const sequelize = require('../config/connections');
 const { User, Day } = require('../models');
+const userData = require('./userData.json');  // Ensure the correct path to userData.json
+const dayData = require('./projectData.json');  // Ensure the correct path to projectData.json
 
 
 const seedDatabase = async () => {
-    await sequelize.sync({ force: true });
+    try {
+        await sequelize.sync({ force: true });
 
-    const users = await User.bulkCreate(userData, {
-        individualHooks: true,
-        returning: true,
-    });
 
-    const days = await Day.bulkCreate(dayData);
+        const users = await User.bulkCreate(userData, {
+            individualHooks: true,
+            returning: true,
+        });
 
-    console.log('All data successfully seeded');
-    process.exit(0);
+
+        // Attach user_id to each day data entry
+        const updatedDayData = dayData.map((day, index) => ({
+            ...day,
+            user_id: users[0].id,  // Assuming a single user from userData.json
+            day: index + 1
+        }));
+
+
+        await Day.bulkCreate(updatedDayData);
+
+
+        console.log('All data successfully seeded');
+        process.exit(0);
+    } catch (err) {
+        console.error('Failed to seed database:', err);
+        process.exit(1);
+    }
 };
 
 

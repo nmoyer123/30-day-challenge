@@ -1,0 +1,33 @@
+<body>
+    <main>
+        <h1>Day {{day}}</h1>
+        <form class="day-form">
+            <div class="form-group">
+                <label for="run-check">Did you run 30 minutes</label>
+                <input type="checkbox" id="run-check" name="run_check" {{#if run_check}}checked{{/if}} />
+            </div>
+            <div class="form-group">
+                <label for="water-check">How many liters of water did you drink</label>
+                <input type="number" id="water-check" name="water_check" value="{{water_check}}" />
+            </div>
+            <div class="form-group">
+                <label for="page-check">How many pages of a book did you read</label>
+                <input type="number" id="page-check" name="page_check" value="{{page_check}}" />
+            </div>
+            <div class="form-group">
+                <label for="alcohol-check">Did you drink alcohol</label>
+                <input type="checkbox" id="alcohol-check" name="alcohol_check" {{#if alcohol_check}}checked{{/if}} />
+            </div>
+            <div class="form-group">
+                <label for="workout-check">How many minutes did you work out</label>
+                <input type="number" id="workout-check" name="workout_check" value="{{workout_check}}" />
+            </div>
+            <div class="form-group">
+                <label for="sleep-check">How many hours of sleep did you get last night?</label>
+                <input type="number" id="sleep-check" name="sleep_check" value="{{sleep_check}}" />
+            </div>
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+    </main>
+    <script src="/js/day.js"></script>
+</body>
