@@ -49,4 +49,8 @@ router.get('/profile', withAuth, async (req, res) => {
       }
 });
 
+router.get('/day', async (req, res) => {
+  res.render('day')
+})
+
 module.exports = router;
