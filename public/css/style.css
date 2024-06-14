@@ -108,6 +108,17 @@ header nav ul li a {
   cursor: pointer;
 }
 
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .btn-primary {
   background-color: var(--color5);
   color: var(--color1);

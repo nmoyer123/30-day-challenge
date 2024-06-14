@@ -1,6 +1,6 @@
-document.getElementById('logout-btn').addEventListener('click', async () => {
-    const response = await fetch('/logout', {
-      method: 'GET',
+const logout = async () => {
+    const response = await fetch('/api/users/logout', {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
   
@@ -9,5 +9,6 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
     } else {
       alert('Logout failed. Please try again.'); // Show an alert if the logout request fails
     }
-  });
+  };
   
+  document.querySelector('.logout-btn').addEventListener('click', logout);
