@@ -22,3 +22,23 @@
     </h4>
  
     <script src="/js/profile.js"></script>
+
+<div class="container mt-5">
+    <h2>Welcome, {{username}}!</h2>
+<div class="row">
+    {{#each days}}
+    <div class="col-2 mb-3">
+        <div class="day-box" id="day-{{this.day}}" onclick="showChallenges({{this.day}})">
+        Day {{this.day}}
+        </div>
+        <div class="challenges d-none" id="challenges-{{this.day}}">
+        <ul>
+            {{#each this.challenges}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</div>

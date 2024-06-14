@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   const container = document.querySelector('.container');
   const modal = document.getElementById('challenge-modal');
   const closeModal = document.querySelector('.close');
@@ -48,3 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("Tasks submitted!");
   });
 });
+
+    const showChallenges = (day) => {
+      const challengesDiv = document.getElementById(`challenges-${day}`);
+      if (challengesDiv.classList.contains('d-none')) {
+        challengesDiv.classList.remove('d-none');
+      } else {
+        challengesDiv.classList.add('d-none');
+      }
+    };
+    window.showChallenges = showChallenges;
+  });
+  
