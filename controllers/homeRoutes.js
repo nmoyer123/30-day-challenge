@@ -30,27 +30,33 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/profile', withAuth, async (req, res) => {
-    try {
-        // Find the logged in user based on the session ID
-        const userData = await User.findByPk(req.session.user_id, {
-          attributes: { exclude: ['password'] },
-          include: [{ model: Day }],
-        });
-    
-        const user = userData.get({ plain: true });
-    
-        res.render('profile', {
-          ...user,
-          logged_in: true
-        });
-      } catch (err) {
-        res.status(500).json(err);
-      }
+router.get('/profile', (req, res) => {
+  const days = Array.from({ length: 30 }, (_, i) => i + 1);
+  res.render('profile', { days });
 });
 
 router.get('/day', async (req, res) => {
-  res.render('day')
-})
+  const day = req.query.day;
+
+  // Replace with the actual data retrieval logic
+  const userChallenges = await UserChallenges.findOne({
+    where: {
+      day: day,
+      user_id: req.session.user_id
+    }
+  });
+
+  const challengesData = {
+    day,
+    run_check: userChallenges ? userChallenges.run_check : false,
+    water_check: userChallenges ? userChallenges.water_check : 0,
+    page_check: userChallenges ? userChallenges.page_check : 0,
+    alcohol_check: userChallenges ? userChallenges.alcohol_check : false,
+    workout_check: userChallenges ? userChallenges.workout_check : 0,
+    sleep_check: userChallenges ? userChallenges.sleep_check : 0
+  };
+
+  res.render('day', challengesData);
+});
 
 module.exports = router;

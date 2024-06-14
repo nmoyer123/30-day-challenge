@@ -250,3 +250,10 @@ header nav ul li a {
   text-align: center;
   margin: 0px;
 }
+/* form styling */
+h2{
+  text-align: center;
+}
+.day-form{
+  text-align: center;
+}
