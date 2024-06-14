@@ -5,8 +5,7 @@
         "page_check": 30,
         "alcohol_check": false,
         "workout_check": 60,
-        "sleep_check": 7,
-        "user_id": 1
+        "sleep_check": 7
     },
     {
         "run_check": false,
@@ -14,8 +13,7 @@
         "page_check": 15,
         "alcohol_check": true,
         "workout_check": 45,
-        "sleep_check": 6,
-        "user_id": 1
+        "sleep_check": 6
     },
     {
         "run_check": true,
@@ -23,8 +21,7 @@
         "page_check": 50,
         "alcohol_check": false,
         "workout_check": 90,
-        "sleep_check": 8,
-        "user_id": 2
+        "sleep_check": 7
     },
     {
         "run_check": false,
@@ -32,8 +29,7 @@
         "page_check": 20,
         "alcohol_check": false,
         "workout_check": 30,
-        "sleep_check": 5,
-        "user_id": 2
+        "sleep_check": 5
     },
     {
         "run_check": true,
@@ -41,8 +37,7 @@
         "page_check": 25,
         "alcohol_check": false,
         "workout_check": 70,
-        "sleep_check": 8,
-        "user_id": 3
+        "sleep_check": 8
     },
     {
         "run_check": false,
@@ -50,8 +45,7 @@
         "page_check": 10,
         "alcohol_check": true,
         "workout_check": 40,
-        "sleep_check": 6,
-        "user_id": 3
+        "sleep_check": 6
     },
     {
         "run_check": true,
@@ -59,8 +53,7 @@
         "page_check": 35,
         "alcohol_check": false,
         "workout_check": 80,
-        "sleep_check": 7,
-        "user_id": 2
+        "sleep_check": 7
     },
     {
         "run_check": false,
@@ -68,7 +61,6 @@
         "page_check": 20,
         "alcohol_check": true,
         "workout_check": 50,
-        "sleep_check": 6,
-        "user_id": 3
+        "sleep_check": 6
     }
 ]
