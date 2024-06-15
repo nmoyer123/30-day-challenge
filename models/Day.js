@@ -5,9 +5,10 @@ class Day extends Model {}
 
 Day.init(
     {
-        Day_id: {
+        day: {
             type: DataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
         run_check: {
@@ -41,7 +42,8 @@ Day.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'day',
+        modelName: 'Day',
+        tableName: 'day'
       }
 );
 

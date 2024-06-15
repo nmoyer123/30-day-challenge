@@ -44,3 +44,16 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
+// Additional code for daybars.js
+app.use('/js', express.static(path.join(__dirname, 'js')));
+
+// Assuming daybars.js is in the js folder
+app.use('/day', express.static(path.join(__dirname, 'day')));
+
+// Route to handle day data
+app.use('/day', require('./controllers/api/dayRoutes'));
+
+// Catch-all route to render the profile page
+app.get('/', (req, res) => {
+  res.render('profile');
+});
