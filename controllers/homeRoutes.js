@@ -54,12 +54,27 @@ router.get('/profile', withAuth, async (req, res) => {
       }
 });
 
-router.get('/day/:day_id', async (req, res) => {
-  try{
-    res.render('day')
+router.get('/day/:day_id', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const dayData = await Day.findByPk(req.params.day_id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const day = dayData.get({ plain: true });
+
+    res.render('day', {
+      ...day,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
-  res.status(500).json(err);
-}
+    res.status(500).json(err);
+  }
 })
 
 module.exports = router;
