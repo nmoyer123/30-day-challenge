@@ -5,7 +5,7 @@ class Day extends Model {}
 
 Day.init(
     {
-        day: {
+        day_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
