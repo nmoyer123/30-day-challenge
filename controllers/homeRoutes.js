@@ -66,6 +66,11 @@ router.get('/day/:day_id', withAuth, async (req, res) => {
       ],
     });
 
+    if(!dayData){
+      res.render('day');
+      return;
+    }
+
     const day = dayData.get({ plain: true });
 
     res.render('day', {
