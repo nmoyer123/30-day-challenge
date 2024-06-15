@@ -14,18 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
             sleep_check: formData.get('sleep_check')
         };
 
-        const response = await fetch(window.location.pathname, {
+        const id = event.target.getAttribute('data-id')
+        const response = await fetch(`/api/day/${id}`, {
             method: 'POST',
+            body: JSON.stringify({ data }),
             headers: {
-                'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data)
-        });
-
-        if (response.ok) {
-            alert('Data saved successfully');
-        } else {
+          });
+      
+          if (response.ok) {
+            document.location.replace('/profile');
+          } else {
             alert('Error saving data');
-        }
+          }
     });
 });
