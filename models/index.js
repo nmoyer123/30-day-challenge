@@ -1,5 +1,5 @@
 const User = require('./User');
-const Day = require('./day');
+const Day = require('./Day');
 
 
 User.hasMany(Day, {
