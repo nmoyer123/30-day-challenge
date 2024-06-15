@@ -4,7 +4,7 @@ const { Day } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // GET day data
-router.get('/:day', async (req, res) => {
+router.get('/:day_id', async (req, res) => {
     try {
         const dayData = await Day.findByPk(req.params.id, {
           include: [
@@ -27,14 +27,17 @@ router.get('/:day', async (req, res) => {
 });
 
 // POST day data
-router.post('/:day', withAuth, async (req, res) => {
+router.post('/:day_id', withAuth, async (req, res) => {
     try {
         const day = req.params.day;
         const dayData = req.body;
 
         const newDay = await Day.create({
+            where:{
+                id: req.params.id,
+                user_id: req.session.user_id,
+            },
             ...dayData,
-            user_id: req.session.user_id,
         });
         res.status(200).json(newDay);
         // await Day.upsert({ day, ...dayData });

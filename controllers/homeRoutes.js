@@ -27,7 +27,12 @@ router.get('/', async ( req, res ) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render('login');
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('login');
 });
 
 router.get('/profile', withAuth, async (req, res) => {
@@ -49,8 +54,12 @@ router.get('/profile', withAuth, async (req, res) => {
       }
 });
 
-router.get('/day', async (req, res) => {
-  res.render('day')
+router.get('/day/:day_id', async (req, res) => {
+  try{
+    res.render('day')
+  } catch (err) {
+  res.status(500).json(err);
+}
 })
 
 module.exports = router;
