@@ -30,14 +30,11 @@ router.get('/:day_id', async (req, res) => {
 router.post('/:day_id', withAuth, async (req, res) => {
     try {
         const day = req.params.day;
-        const dayData = req.body;
 
         const newDay = await Day.create({
-            where:{
+                ...req.body,
                 id: req.params.id,
                 user_id: req.session.user_id,
-            },
-            ...dayData,
         });
         res.status(200).json(newDay);
         // await Day.upsert({ day, ...dayData });
