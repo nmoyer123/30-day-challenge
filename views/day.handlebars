@@ -1,7 +1,7 @@
 <body>
     <main>
         <h1>Day {{day}}</h1>
-        <form class="day-form">
+        <form class="day-form" id="day-form">
             <div class="form-group">
                 <label for="run-check">Did you run 30 minutes:</label>
                 <input type="checkbox" id="run-check" name="run_check" {{#if run_check}}checked{{/if}} />
@@ -15,7 +15,7 @@
                 <input type="number" id="page-check" name="page_check" value="{{page_check}}" />
             </div>
             <div class="form-group">
-                <label for="alcohol-check">Did you drink alcohol:</label>
+                <label for="alcohol-check">If you did not drink alcohol:</label>
                 <input type="checkbox" id="alcohol-check" name="alcohol_check" {{#if alcohol_check}}checked{{/if}} />
             </div>
             <div class="form-group">
@@ -32,5 +32,5 @@
     <footer class="footer">
         <p>"Find something to believe in, and find it for yourself. When you do, pass it on to the future." -Solid Snake, MGS2</p>
     </footer>
-    <script src="/js/day.js"></script>
+    <script src="/js/daybars.js"></script>
 </body>
