@@ -241,12 +241,24 @@ header nav ul li a {
 }
 
 .profileQuote{
-  background-color: #333;
-  color: #f0f0f0;
+  background-color: var(--color1);
+  color: var(--color5);
   font-size: 23px;
   padding: 10px;
   padding-top: 15px;
-  height: 80px;
+  height: 70px;
   text-align: center;
   margin: 0px;
+}
+
+h1, .day-form{
+  text-align: center;
+}
+
+.welcome{
+  text-align: center;
+  font-size: 7vh;
+  font-weight: bolder;
+  margin: 0px;
+  margin-top: 7px;
 }

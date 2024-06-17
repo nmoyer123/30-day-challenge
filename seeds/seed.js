@@ -1,7 +1,7 @@
 const sequelize = require('../config/connections');
 const { User, Day } = require('../models');
-const userData = require('./userData.json');  // Ensure the correct path to userData.json
-const dayData = require('./projectData.json');  // Ensure the correct path to projectData.json
+const userData = require('./userData.json');  
+const dayData = require('./projectData.json');  
 
 
 const seedDatabase = async () => {
@@ -18,7 +18,7 @@ const seedDatabase = async () => {
         // Attach user_id to each day data entry
         const updatedDayData = dayData.map((day, index) => ({
             ...day,
-            user_id: users[0].id,  // Assuming a single user from userData.json
+            user_id: users[0].id,  
             day: index + 1
         }));
 
