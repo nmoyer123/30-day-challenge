@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const { Pool } = require('pg');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
@@ -12,13 +11,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-      rejectUnauthorized: false
-  }
-});
 
 const hbs = exphbs.create({ helpers });
 
