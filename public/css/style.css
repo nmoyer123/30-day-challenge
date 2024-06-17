@@ -241,8 +241,8 @@ header nav ul li a {
 }
 
 .profileQuote{
-  background-color: #333;
-  color: #f0f0f0;
+  background-color: var(--color1);
+  color: var(--color5);
   font-size: 23px;
   padding: 10px;
   padding-top: 15px;
