@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,30 +8,25 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {{#if logged_in}}
-          <li><a href="/profile">Profile</a></li>
-          <li><a class="logout-btn">logout</a></li>
-        {{else}}
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/login">Login</a></li>
-          {{!-- <li><button class="no-button logout-btn">Logout</button></li> --}}
-        {{/if}}
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul class="nav-left">
+      <li><a href="/profile">Profile</a></li>
+    </ul>
+    <ul class="nav-right">
+      <li><a href="/">Home</a></li>
+      {{#if logged_in}}
+        <li><a class="logout-btn">Logout</a></li>
+      {{else}}
+        <li><a href="/login">Login</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>
+ {{{body}}}
 
- 
 
-  {{{body}}}
-  {{!-- <script src="/js/login.js"></script>
-  <script src="/js/logout.js"></script>
-  <script src="/js/profile.js"></script> --}}
-  {{!-- <script src="/js/logout.js"></script> --}}
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
 </body>
 </html>
