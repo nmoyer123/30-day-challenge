@@ -15,19 +15,23 @@ Day.init(
             type: DataTypes.BOOLEAN
         },
         water_check: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         page_check: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         alcohol_check: {
             type: DataTypes.BOOLEAN
         },
         workout_check: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         sleep_check: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         user_id: {
             type: DataTypes.INTEGER,
