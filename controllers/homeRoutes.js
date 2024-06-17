@@ -56,8 +56,6 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/day/:day_id', withAuth, async (req, res) => {
   try {
-    console.log("looking for this");
-    console.log(req.params.day_id);
     // Find the logged in user based on the session ID
     const dayData = await Day.findByPk(req.params.day_id, {
       include: [
