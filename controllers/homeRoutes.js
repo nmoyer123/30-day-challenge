@@ -75,6 +75,7 @@ router.get('/day/:day_id', withAuth, async (req, res) => {
 
     res.render('day', {
       ...day,
+      day_id: req.params.day_id,
       logged_in: req.session.logged_in
     });
   } catch (err) {
