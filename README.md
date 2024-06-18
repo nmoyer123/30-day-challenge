@@ -57,6 +57,12 @@ To get a local copy up and running, follow these steps:
 - **Profile:** After logging in, users can access their profile to see a calendar of the 30 days.
 - **Track Progress:** Click on a day to log activities such as running, water intake, reading, alcohol consumption, workout, and sleep.
 - **Save Data:** Data for each day is saved and can be revisited by clicking on the respective day.
+![DAYHome](https://github.com/nmoyer123/30-day-challenge/assets/161282417/07657479-9820-447c-b7c1-7582c6473571)
+![Screenshot 2024-06-17 163641](https://github.com/nmoyer123/30-day-challenge/assets/161282417/78e016b7-ec39-4468-92da-752dc08f8533)
+![Screenshot 2024-06-17 172938](https://github.com/nmoyer123/30-day-challenge/assets/161282417/d21e5787-5b64-4257-b734-a7d4539b4855)
+
+
+
 
 ## Features
 
